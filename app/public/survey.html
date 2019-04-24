@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Survey</title>
+
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <style>
+
+  .focused{border: 3px solid orange;}
+
+
+</style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="jumbotron">
+      <h1 class="text-center">
+        <span class="fa-list-check"></span>Friend Finder</h1>
+      <hr>
+      <h2 class="text-center">Survey</h2>
+      <br>
+      <div class="text-center">
+       <a href="/">
+          <button class="btn btn-lg btn-default">
+            <span class="fa fa-home"></span>
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Reservation Page -->
+        <div class="card">
+          <div class="card-header">
+            Survey
+          </div>
+          <div class="card-body">
+            <form role="form">
+              <div class="form-group">
+                <label for="reserve-name">Name</label>
+                <input type="text" class="form-control" id="reserve-name">
+              </div>
+
+              <div class="form-group">
+                <label for="reserve-photo">Select a Photo or input a link to one of your own:</label>
+                <div id="crystals"></div>
+                <br>
+                <input type="text" class="form-control" id="reserve-photo">
+              </div>
+              <form id="quiz">
+                <!-- Question 1 -->
+                <h2>Question 1</h2>
+                <h3>Your mind is always buzzing with unexplored ideas and plans.</h3>
+                <!-- Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1. -->
+                <!-- The value is which answer the choice corresponds to. -->
+                <label><input type="radio" name="q1" id="q1" value="1">
+                  1 (strongly disagree)
+                </label><br />
+                <label><input type="radio" name="q1" id="q1" value="2">
+                  2
+                </label><br />
+                <label><input type="radio" name="q1" id="q1" value="3">
+                  3 (agree)
+                </label><br />
+                <label><input type="radio" name="q1" id="q1" value="4">
+                  4
+                </label><br />
+                <label><input type="radio" name="q1" id="q1" value="5">
+                  5 (strongly agree)
+                </label><br />
+
+                <br>
+
+            
+                <!-- Question 2 -->
+                <h2>Question 2</h2>
+                <h3>Generally speaking, you rely more on your experience than your imagination.</h3>
+                <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
+                <label><input type="radio" name="q2" id="q2" value="1">
+                  1 (strongly disagree)
+                </label><br />
+                <label><input type="radio" name="q2" id="q2" value="2">
+                 2
+                </label><br />
+                <label><input type="radio" name="q2" id="q2" value="3">
+                  3 (agree)
+                </label><br />
+                <label><input type="radio" name="q2" id="q2" value="4">
+                  4
+                </label><br />
+                <label><input type="radio" name="q2" id="q2" value="5">
+                  5 (strongly agree)
+                </label><br />
+
+                <br>
+                
+                <!-- Question 3 -->
+                <h2>Question 3</h2>
+                <h3>You find it easy to stay relaxed and focused even when there is some pressure.</h3>
+                <!-- Choices for the third question -->
+                <label><input type="radio" name="q3" id="q3" value="1">
+                  1 (strongly disagree)
+                </label><br />
+                <label><input type="radio" name="q3" id="q3" value="2">
+                  2
+                </label><br />
+                <label><input type="radio" name="q3" id="q3" value="3">
+                  3 (agree)
+                </label><br />
+                <label><input type="radio" name="q3" id="q3" value="4">
+                 4
+                </label><br />
+                <label><input type="radio" name="q3" id="q3"  value="5">
+                  5 (strongly agree)
+                 </label><br />
+
+                 <br>
+
+                <!-- Question 4 -->
+                <h2>Question 4</h2>
+                 <h3>You rarely do something just out of sheer curiosity.</h3>
+                <!-- Choices for the fourth question -->
+                <label><input type="radio" name="q4" id="q4" value="1">
+                  1 (strongly disagree)
+                </label><br />
+                <label><input type="radio" name="q4" id="q4" value="2">
+                  2
+                </label><br />
+                <label><input type="radio" name="q4" id="q4" value="3">
+                  3 (agree)
+                </label><br />
+                <label><input type="radio" name="q4" id="q4" value="4">
+                  4
+                </label><br />
+                <label><input type="radio" name="q4" id="q4" value="5">
+                  5 (strongly agree) 
+                </label><br />
+
+                <br>
+
+                <!-- Question 5 -->
+                <h2>Question 5</h2>
+                <h3>People can rarely upset you.</h3>
+                <!-- Choices for the fourth question -->
+                <label><input type="radio" name="q5" id="q5" value="1">
+                  1 (strongly disagree)
+                </label><br />
+                <label><input type="radio" name="q5" id="q5" value="2">
+                  2
+                </label><br />
+                <label><input type="radio" name="q5" id="q5" value="3">
+                  3 (agree)
+                </label><br />
+                <label><input type="radio" name="q5" id="q5" value="4">
+                  4
+                </label><br />
+                <label><input type="radio" name="q5" id="q5" value="5">
+                  5 (strongly agree)
+                </label><br />
+
+                  <br>
+
+
+                 <!-- Question 6 -->
+                  <h2>Question 6</h2>
+                  <h3>It is often difficult for you to relate to other people’s feelings.</h3>
+                  <!-- Here are the choices for the first question. Each input tag must have the same name. For this question, the name is q1. -->
+                  <!-- The value is which answer the choice corresponds to. -->
+                  <label><input type="radio" name="q6" id="q6" value="1">
+                    1 (strongly disagree) 
+                  </label><br />
+                  <label><input type="radio" name="q6" id="q6" value="2">
+                    2
+                  </label><br />
+                  <label><input type="radio" name="q6" id="q6" value="3">
+                    3 (agree)
+                  </label><br />
+                  <label><input type="radio" name="q6" id="q6" value="4">
+                    4
+                  </label><br />
+                  <label><input type="radio" name="q6" id="q6" value="5">
+                    5 (strongly agree)
+                  </label><br />
+
+                  <br>
+
+              
+                  <!-- Question 7 -->
+                  <h2>Question 7</h2>
+                  <h3>In a discussion, truth should be more important than people’s sensitivities.</h3>
+                  <!-- Here are the choices for the second question. Notice how each input tag has the same name (q2), but a different name than the previous question. -->
+                  <label><input type="radio" name="q7" id="q7" value="1">
+                    1 (strongly disagree) 
+                  </label><br />
+                  <label><input type="radio" name="q7" id="q7" value="2">
+                    2
+                  </label><br />
+                  <label><input type="radio" name="q7" id="q7" value="3">
+                    3 (agree)
+                  </label><br />
+                  <label><input type="radio" name="q7" id="q7" value="4">
+                    4
+                  </label><br />
+                  <label><input type="radio" name="q7" id="q7" value="5">
+                    5 (strongly agree)
+                  </label><br />
+
+                  <br>
+                  
+                  <!-- Question 8 -->
+                  <h2>Question 8</h2>
+                  <h3>You rarely get carried away by fantasies and ideas.</h3>
+                  <!-- Choices for the third question -->
+                  <label><input type="radio" name="q8" id="q8" value="1">
+                    1 (strongly disagree)
+                  </label><br />
+                  <label><input type="radio" name="q8" id="q8" value="2">
+                    2
+                  </label><br />
+                  <label><input type="radio" name="q8" id="q8" value="3">
+                    3 (agree)
+                  </label><br />
+                  <label><input type="radio" name="q8" id="q8" value="4">
+                   4
+                  </label><br />
+                  <label><input type="radio" name="q8" id="q8" value="5">
+                    5 (strongly agree)
+                   </label><br />
+                  
+                   <br>
+
+                  <!-- Question 9 -->
+                  <h2>Question 9</h2>
+                  <h3>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h3>
+                  <!-- Choices for the fourth question -->
+                  <label><input type="radio" name="q9" id="q9" value="1">
+                    1 (strongly disagree)
+                  </label><br />
+                  <label><input type="radio" name="q9" id="q9" value="2">
+                    2
+                  </label><br />
+                  <label><input type="radio" name="q9" id="q9" value="3">
+                    3 (agree)
+                  </label><br />
+                  <label><input type="radio" name="q9" id="q9" value="4">
+                    4
+                  </label><br />
+                  <label><input type="radio" name="q9" id="q9" value="5">
+                    5 (strongly agree)
+                   </label><br />
+                  
+                   <br>
+
+
+
+                <!-- Question 10 -->
+                <h2>Question 10</h2>
+                <h3>You feel more energetic after spending time with a group of people.</h3>
+                <!-- Choices for the fourth question -->
+                <label><input type="radio" name="q10" id="q10" value="1">
+                  1 (strongly disagree)
+                </label><br />
+                <label><input type="radio" name="q10" id="q10" value="2">
+                  2
+                </label><br />
+                <label><input type="radio" name="q10" id="q10" value="3">
+                  3 (agree)
+                </label><br />
+                <label><input type="radio" name="q10" id="q10" value="4">
+                  4
+                </label><br />
+                <label><input type="radio" name="q10" id="q10" value="5">
+                  5 (strongly agree)
+                </label><br />
+
+                <button type="submit" id="submit" onclick="tabulateAnswers()">Submit Your Answers</button>
+                <button type="reset" id="reset" onclick="runFriendQuery()">Find your Friends</button>
+                </form>
+
+
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          <a href="/api/friends">Friends API Link</a> |
+          <a href="https://olsonathan.github.io/Portfolio/">GitHub Repo</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="match-name"></h2>
+          <img id="match-img" src="https://picsum.photos/200/300" alt="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
+
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<script type="text/javascript">
+  // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+  // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+  // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+  // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+  var scores = []
+  var photo;
+  
+
+
+
+for (var i = 1; i < 6; i++) {
+var x = Math.floor(Math.random() * 1000)
+var imageCrystal = $("<img>");
+imageCrystal.addClass("crystal-image");
+imageCrystal.attr("src", "https://picsum.photos/id/" + x + "/200/300");
+imageCrystal.attr("data-crystalvalue","https://picsum.photos/id/" + x + "/200/300" );
+$("#crystals").append(imageCrystal);
+}
+       
+
+$(".crystal-image").on("click", function() {
+  var crystalValue = ($(this).attr("data-crystalvalue"));
+
+     $(".crystal-image").removeClass('focused');
+      $(this).addClass('focused');
+      
+      photo = crystalValue
+      
+      //$("#reserve-photo")=crystalValue
+      console.log(crystalValue)
+      return crystalValue
+    });
+   
+
+
+
+
+/*
+$(".crystal-image").on("click", function() {
+$(".crystal-image").addClass('focused');
+  var crystalValue = ($(this).attr("data-crystalvalue"));
+});
+
+*/
+
+      $(".submit").on("click", function(event) {
+    event.preventDefault();
+
+    tabulateAnswers()
+
+  });
+
+    
+
+   function tabulateAnswers(){
+
+  var choices = document.getElementsByTagName('input');
+  // loop through all the radio inputs
+  for (i=0; i<choices.length; i++) {
+    // if the radio is checked..
+    if (choices[i].checked) {
+      ff = parseInt(choices[i].value)
+      scores.push(ff)
+      total = scores.reduce(function(acc, val) { return acc + val; }, 0)
+
+
+
+      console.log(scores)
+    }
+  }
+
+  //$("#reserve-photo").val(),
+    // Here we grab the form elements
+    var newReservation = {
+      name: $("#reserve-name").val(),
+      photo: photo || $("#reserve-photo").val(), //crystalValue, //$("#reserve-photo").val(),  //
+      scores: scores,
+      total: total
+
+
+
+
+    };
+
+    scores = []
+    console.log(newReservation);
+    //console.log(scores)
+
+    
+  
+   
+  
+  
+
+    // This line is the magic. It"s very similar to the standard ajax function we used.
+    // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+    // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+    // depending on if a tables is available or not.
+
+    $.post("/api/friends", newReservation,
+      function(data) {
+
+        // If a table is available... tell user they have booked.
+        if (data) {
+          alert("Welcome! " + newReservation.name);
+        }
+
+        // If a table isn't available... tell user they on the waiting list.
+        else {
+          alert("Sorry, you are on the waiting list :(");
+        }
+
+        // Clear the form when submitting
+        $("#reserve-name").val("");
+        $("#reserve-photo").val("");
+        //$('input[name="myradio"]').attr('checked', false);
+       
+
+
+      });
+
+      
+
+  };
+
+
+  
+  
+  $("#find").on("click", function(event) {
+    event.preventDefault();
+
+    runFriendQuery()
+    //runFriendQuery2()
+
+  });
+
+
+
+
+
+  function runFriendQuery() {
+    // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+    $.ajax({ url: "/api/friends", method: "GET" })
+      .then(function(friendData) {
+
+        // Here we then log the tableData to console, where it will show up as an object.
+        console.log("here are all the friends" + (JSON.stringify(friendData)));
+        console.log("------------------------------------");
+
+        var len = ((friendData.length)-1)
+        
+        // Loop through and display each of the customers
+        for (var i = 0; i < len; i++) {
+
+          if(friendData[len].total === friendData[i].total){
+              console.log(friendData[len].name)
+              console.log("You have a perfect Match!!!")
+              console.log(friendData[i].name)
+              console.log(friendData[i].photo)
+
+              $("#match-name").text("You have a perfect Match!!! " + friendData[i].name);
+              $("#match-img").attr("src", friendData[i].photo);
+
+          // Show the modal with the best match
+               $("#results-modal").modal("toggle");
+
+               break
+          }
+               
+           else if((friendData[i].total-2) < friendData[len].total && friendData[len].total < (friendData[i].total+2)){
+               console.log(friendData[len].name)
+                console.log("You have a close Match!!")
+              console.log(friendData[i].name)
+              console.log(friendData[i].photo)
+              $("#match-name").text("You have a close Match!! " + friendData[i].name);
+              $("#match-img").attr("src", friendData[i].photo);
+
+          // Show the modal with the best match
+               $("#results-modal").modal("toggle");
+            break
+        }
+
+        else  if((friendData[i].total-4) < friendData[len].total && friendData[len].total < (friendData[i].total+4)){
+                console.log("You have a near Match!")
+              console.log(friendData[i].name)
+              console.log(friendData[i].photo)
+
+              $("#match-name").text("You have a near Match! " + friendData[i].name);
+              $("#match-img").attr("src", friendData[i].photo);
+
+          // Show the modal with the best match
+               $("#results-modal").modal("toggle");
+               
+          }
+
+          else{
+            console.log(friendData[len].name)
+            console.log("You dont have any Match's")
+
+            $("#match-name").text("Sorry " + friendData[len].name +  " there are no matches");
+              $("#match-img").attr("src", "https://picsum.photos/id/237/200/300");
+
+          // Show the modal with the best match
+               $("#results-modal").modal("toggle");
+            
+          }
+          
+
+
+
+
+
+
+          
+        } 
+
+
+
+        
+      });
+  }
+
+
+  function runFriendQuery2() {
+    // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+    $.ajax({ url: "/api/friends", method: "GET" })
+      .then(function(friendData) {
+
+        // Here we then log the tableData to console, where it will show up as an object.
+        console.log("here are all the friends" + (JSON.stringify(friendData)));
+        console.log("------------------------------------");
+
+        var len = ((friendData.length)-1)
+        
+        // Loop through and display each of the customers
+        for (var i = 0; i < len; i++) {
+
+          if(friendData[len].total === friendData[i].total){
+              console.log(friendData[len].name)
+              console.log("You have a perfect Match!!!")
+              console.log(friendData[i].name)
+              console.log(friendData[i].photo)
+
+              $("#match-name").text(friendData[i].name);
+              $("#match-img").attr("src", friendData[i].photo);
+
+          // Show the modal with the best match
+               $("#results-modal").modal("toggle");
+            
+              
+          }
+               
+            else{
+              setTimeout(closeMatch, 3000);
+            }
+            
+          
+                    
+          
+        } 
+
+        
+        //closeMatch()
+
+        
+      });
+  }
+
+ 
+
+
+
+
+  function closeMatch() {
+    $.ajax({ url: "/api/friends", method: "GET" })
+      .then(function(friendData) {
+
+    var len = ((friendData.length)-1)
+         for (var i = 0; i < len; i++) {
+
+
+        if((friendData[i].total-2) < friendData[len].total && friendData[len].total < (friendData[i].total+2)){
+               console.log(friendData[len].name)
+                console.log("You have a close Match!!")
+              console.log(friendData[i].name)
+              console.log(friendData[i].photo)
+              $("#match-name").text(friendData[i].name);
+              $("#match-img").attr("src", friendData[i].photo);
+
+          // Show the modal with the best match
+               $("#results-modal").modal("toggle");
+          
+        }
+                  
+        else{
+        setTimeout(nearMatch, 5000);
+        }
+            
+               }
+               
+              
+               
+          
+        })
+      }
+    
+
+
+      function nearMatch() {
+        $.ajax({ url: "/api/friends", method: "GET" })
+      .then(function(friendData) {
+
+        var len = ((friendData.length)-1)
+        for (var i = 0; i < len; i++) {
+
+          if((friendData[i].total-4) < friendData[len].total && friendData[len].total < (friendData[i].total+4)){
+                console.log("You have a near Match!")
+              console.log(friendData[i].name)
+              console.log(friendData[i].photo)
+
+              $("#match-name").text(friendData[i].name);
+              $("#match-img").attr("src", friendData[i].photo);
+
+          // Show the modal with the best match
+               $("#results-modal").modal("toggle");
+           
+          }
+          
+          else{ 
+          setTimeout(noMatch, 7000);
+          }
+          
+        }
+        
+        
+      })
+      }
+
+      function noMatch() {
+        $.ajax({ url: "/api/friends", method: "GET" })
+      .then(function(friendData) {
+        var len = ((friendData.length)-1)
+            console.log(friendData[len].name)
+            console.log("You dont have any Match's")
+
+            $("#match-name").text("Sorry there are no matches");
+              $("#match-img").attr("src", friendData[i].photo);
+
+          // Show the modal with the best match
+               $("#results-modal").modal("toggle");
+          
+          })
+        }
+
+</script>
+
